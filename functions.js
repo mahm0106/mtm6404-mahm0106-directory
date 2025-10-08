@@ -23,10 +23,11 @@ function list(clients) {
 };
   
   function info(index) {
-    return clients.find((i) => i === index);
+    return clients.find((client, i) => i === index);
   }
   
   function search(query) {
     return clients.filter(client => client.name.toLowerCase().includes(query.toLowerCase())
     );
+
   }
